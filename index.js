@@ -9,7 +9,14 @@ const notFound = require("./middlewares/not-found");
 const path = require("path");
 
 app.use(xss());
-app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      connectSrc: ["'self'", "http://localhost:9000"],
+    },
+  })
+);
 app.use(cors());
 app.use(
   rateLimiter({
