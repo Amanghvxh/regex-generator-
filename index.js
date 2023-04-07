@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const regexRouter = require("./types/routes/regex");
+const regexRouter = require("./routes/regex");
 const cors = require("cors");
 const xss = require("xss-clean");
 const helmet = require("helmet");
