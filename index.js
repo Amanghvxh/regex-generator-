@@ -28,4 +28,4 @@ app.use(express.json());
 app.use("/api/v1/build", regexRouter);
 app.use(notFound);
 
-app.listen(500, console.log("server is running...."));
+app.listen(9000, console.log("server is running...."));

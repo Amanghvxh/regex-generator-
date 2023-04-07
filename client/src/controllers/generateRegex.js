@@ -14,7 +14,7 @@ const generateRegex = async function (
     };
     console.log(reqBody);
     const { data } = await axios.post(
-      "http://localhost:500/api/v1/build",
+      "http://localhost:9000/api/v1/build",
       reqBody
     );
     console.log(data);
