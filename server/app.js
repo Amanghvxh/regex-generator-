@@ -18,7 +18,8 @@ app.use(
   })
 );
 
-app.use("/", express.static(path.join(__dirname, "../client/build")));
+app.use("/", express.static(path.join(__dirname, "../client", "build")));
+console.log(__dirname);
 
 app.use(express.json());
 app.use("/api/v1/build", regexRouter);
